@@ -4,6 +4,7 @@ Implementing User Authentication With Node JS and PostgreSQL
 Followed this life saving video: https://www.youtube.com/watch?v=vxu1RrR0vbw&ab_channel=ConorBailey
 
 Authentication libraries used:
+
 bcrypt - To hash user password to make them secure
 
 express-session - To store session details in a session cookie object
