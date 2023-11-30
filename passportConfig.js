@@ -1,12 +1,13 @@
 import { Strategy as LocalStrategy } from "passport-local";
 import pg from "pg";
+import 'dotenv/config';
 import bcrypt from "bcrypt";
 
 const db = new pg.Client({
-    user: "postgres",
-    host: "localhost",
-    database: "database",
-    password: "password",
+    user: process.env.DB_USER,
+    host: process.env.DB_HOST,
+    database: process.env.DB_DATABASE,
+    password: process.env.DB_PASSWORD,
     port: 5432,
   });
   db.connect();

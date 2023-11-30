@@ -1,5 +1,6 @@
 import express from "express";
 import pg from "pg";
+import 'dotenv/config';
 import bodyParser from "body-parser";
 import bcrypt from "bcrypt";
 import session from "express-session";
@@ -20,7 +21,7 @@ Error: No default engine was specified and no extension was provided
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(session({
-    secret: 'secret',
+    secret: process.env.COOKIE_SECRET,
     resave: false,
     saveUninitialized: false
 }));
@@ -31,10 +32,10 @@ app.use(passport.session());
 app.use(flash());
 
 const db = new pg.Client({
-    user: "postgres",
-    host: "localhost",
-    database: "database",
-    password: "password",
+    user: process.env.DB_USER,
+    host: process.env.DB_HOST,
+    database: process.env.DB_DATABASE,
+    password: process.env.DB_PASSWORD,
     port: 5432,
   });
   db.connect();
