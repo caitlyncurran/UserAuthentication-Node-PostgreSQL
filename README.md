@@ -15,5 +15,9 @@ Authentication libraries used:
 
 **passport-local** - To implement a local authentication strategy for our application
 
+**dotenv** - Allows for environment variables to be loaded into a .env file
+
 
 If you're from udemy, let me know if this helps. It's not perfect, but it's the closest to Angela's content that I could find. I tried to change unfamiliar syntax from the video into stuff we already learned in previous modules. It's still pretty involved, so I am still hoping that Angela updates the Authentication module soon! Until then, this will just have to do...
+
+Google OAuth2.0 to be added soon.
