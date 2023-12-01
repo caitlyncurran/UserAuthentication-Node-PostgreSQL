@@ -13,7 +13,9 @@
     <title>Dashboard</title>
   </head>
   <body>
+    <% if (locals.user) { %>
     <h1>Hello, <%= user.charAt(0).toUpperCase() + user.slice(1) %></h1>
+    <% } %>
     <a href="/users/logout">Logout</a>
   </body>
 </html>

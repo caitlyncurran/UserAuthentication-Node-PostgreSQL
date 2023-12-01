@@ -47,14 +47,4 @@ export function initialize(passport) {
         authenticateUser
         )
     );
-
-    passport.serializeUser((user, done) => done(null, user.id));
-    passport.deserializeUser(async (id, done) => {
-        try {
-        const result = await db.query(`SELECT * FROM users WHERE id = $1`, [id]);
-        return done(null, result.rows[0]);
-        } catch (err) {
-            console.log(err);
-        }
-    });
 }
